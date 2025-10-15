@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="icon_e-cnpj.png" type="image/x-icon">
+    <title>Consulta de CNPJ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-100">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-700">Consulta de CNPJ</h1>
+            <p class="text-gray-500 mt-2">Busque informações de empresas brasileiras de forma rápida e fácil.</p>
+        </header>
+
+        <main>
+            <section id="search-section" class="bg-white shadow-md rounded-lg p-6 max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" id="cnpj-input" class="flex-grow p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Digite o CNPJ (somente números)">
+                    <button id="search-btn" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-search mr-2"></i> Pesquisar
+                    </button>
+                </div>
+                <div id="error-message" class="text-red-500 mt-4 text-center hidden"></div>
+            </section>
+
+            <section id="results-section" class="mt-8 bg-white shadow-md rounded-lg p-6 max-w-2xl mx-auto hidden">
+                <h2 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">Detalhes do CNPJ</h2>
+                <div id="cnpj-details" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div><strong class="text-gray-600">Razão Social:</strong> <span id="razao-social"></span></div>
+                    <div><strong class="text-gray-600">Nome Fantasia:</strong> <span id="nome-fantasia"></span></div>
+                    <div><strong class="text-gray-600">CNPJ:</strong> <span id="cnpj"></span></div>
+                    <div><strong class="text-gray-600">Situação Cadastral:</strong> <span id="situacao"></span></div>
+                    <div class="md:col-span-2"><strong class="text-gray-600">Endereço:</strong> <span id="endereco"></span></div>
+                    <div class="md:col-span-2"><strong class="text-gray-600">Atividade Principal:</strong> <span id="atividade-principal"></span></div>
+                    <div><strong class="text-gray-600">Capital Social:</strong> <span id="capital-social"></span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
